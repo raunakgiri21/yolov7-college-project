@@ -7,7 +7,7 @@ st.caption('This web application demonstrate object detection using Yolo')
 st.markdown("""
 ##### ***Example -***
 """)
-st.write(os.getcwd())
+
 st.image('./webApp/images/sample_home.png')
 
 # Content

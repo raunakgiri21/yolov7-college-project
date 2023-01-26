@@ -11,7 +11,7 @@ st.caption('Try object detection by uploading an image!')
 # ................ Loading Model...............
 import onnxruntime as ort
 from time import sleep
-from webApp/yolo_predictions import YOLO_Pred
+from "webApp/yolo_predictions" import YOLO_Pred
 
 modelSuccessStatus = ''
 
