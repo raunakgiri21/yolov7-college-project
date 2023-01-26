@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 st.set_page_config(page_title="Home", layout='wide', page_icon='./images/home.png')
 st.title("Vehicle Classification")
@@ -6,6 +7,7 @@ st.caption('This web application demonstrate object detection using Yolo')
 st.markdown("""
 ##### ***Example -***
 """)
+st.write(os.getcwd())
 st.image('./images/sample_home.png')
 
 # Content
