@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-st.set_page_config(page_title="Detection", layout='wide', page_icon='./webApp/images/object.png')
+st.set_page_config(page_title="Detection", layout='wide', page_icon='./images/object.png')
 st.title('Welcome to Detection Page')
 st.caption('Try object detection by uploading an image!')
 
@@ -11,18 +11,18 @@ st.caption('Try object detection by uploading an image!')
 # ................ Loading Model...............
 import onnxruntime as ort
 from time import sleep
-from "webApp/yolo_predictions" import YOLO_Pred
+from yolo_predictions import YOLO_Pred
 
 modelSuccessStatus = ''
 
 with st.spinner("Preparing Your Yolo Model..."):
     try:
-        w = './webApp/models/best.onnx'
+        w = './models/best.onnx'
         cuda = True
         providers = ['CUDAExecutionProvider', 'CPUExecutionProvider'] if cuda else ['CPUExecutionProvider']
         session = ort.InferenceSession(w, providers=providers)
 
-        yolo = YOLO_Pred(w,'./webApp/models/data.yaml',session)
+        yolo = YOLO_Pred(w,'./models/data.yaml',session)
         sleep(0.5)
         modelSuccessStatus = st.success("Your Model is Active!")
     except:
