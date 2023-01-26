@@ -8,7 +8,7 @@ st.markdown("""
 ##### ***Example -***
 """)
 st.write(os.getcwd())
-st.image('./images/sample_home.png')
+st.image('./webApp/images/sample_home.png')
 
 # Content
 st.markdown("""
