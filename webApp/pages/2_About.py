@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="About", layout='wide', page_icon='./images/about.png')
+st.set_page_config(page_title="About", layout='wide', page_icon='./webApp/images/about.png')
 st.title('About This Project')
 st.markdown("""
 ### What this project is?
